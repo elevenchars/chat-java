@@ -133,7 +133,7 @@ public class ChatServer {
             } else if (msg.startsWith("/roll ")) {
                 broadcast(username + " rolled "+(new Random().nextInt(Integer.parseInt(msg.substring(6,msg.length())))+1));
             } else if (msg.startsWith("/vince ")) {
-                broadcast(msg.substring(7,msg.length()).replaceAll(" ", " NO "));
+                broadcast(username + "> " + msg.substring(7,msg.length()).replaceAll(" ", " NO "));
             }
             else if(msg != null || msg != " " || msg != "") {
                 broadcast(username + "> " + msg);
